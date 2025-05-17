@@ -50,3 +50,16 @@ The dataset has 6 variables (5 independent features and 1 dependent target) 
 | `sleep_hours`                           | Numeric   | Hours of sleep per night.                                          |
 | `sample_question_papers_practiced`      | Numeric   | Number of past papers attempted.                                   |
 | `performance_index` _(target)_          | Numeric   | Predicted exam score.                                              |
+## Model Evaluation
+```python
+from sklearn.metrics import r2_score
+
+
+print(f"R² : {r2_score(y_test, predictions)}")
+```
+```
+Output:
+R² : 0.9888721485893653
+```
+
+R<sup>2</sup> Score is 0.9889. This suggest that 98.89% of the variation in performance index is explained by the model— excellent fit.
